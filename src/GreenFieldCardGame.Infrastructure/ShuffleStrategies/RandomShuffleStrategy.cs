@@ -5,11 +5,14 @@ using GreenFieldCardGame.Core.Interfaces;
 
 namespace GreenFieldCardGame.Infrastructure.ShuffleStrategies
 {
+    /// <summary>
+    /// RandomShuffleStrategy implements the IShuffleStrategy interface
+    /// </summary>
     public class RandomShuffleStrategy: IShuffleStrategy
     {
-        private static readonly Random _random = new Random(); // Static for better randomness across instances
+        private static readonly Random _random = new Random();
 
-        public void Shuffle(Deck deck)
+        public void Shuffle(IDeck deck)
         {
             // Get a mutable copy of the cards from the deck
             var cards = deck.Cards.ToList();

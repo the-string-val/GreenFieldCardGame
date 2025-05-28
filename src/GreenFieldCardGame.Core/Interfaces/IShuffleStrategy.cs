@@ -1,5 +1,4 @@
 ﻿
-using GreenFieldCardGame.Core.Entities;
 
 namespace GreenFieldCardGame.Core.Interfaces
 {
@@ -9,6 +8,6 @@ namespace GreenFieldCardGame.Core.Interfaces
     /// </summary>
     public interface IShuffleStrategy
     {
-        void Shuffle(Deck deck);
+        void Shuffle(IDeck deck);
     }
 }
