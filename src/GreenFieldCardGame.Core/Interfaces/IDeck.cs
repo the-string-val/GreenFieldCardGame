@@ -5,6 +5,7 @@ namespace GreenFieldCardGame.Core.Interfaces
 {
     public interface IDeck
     {
+
         /// <summary>
         /// Read-only access to the cards in the deck
         /// </summary>
@@ -27,6 +28,12 @@ namespace GreenFieldCardGame.Core.Interfaces
         /// <param name="card"></param>
         /// <returns></returns>
         bool RemoveCard(Card card);
+
+        /// <summary>
+        /// Set the cards in the deck to a new collection.
+        /// </summary>
+        /// <param name="newCards"></param>
+        void SetCards(IEnumerable<Card> newCards);
 
     }
 }

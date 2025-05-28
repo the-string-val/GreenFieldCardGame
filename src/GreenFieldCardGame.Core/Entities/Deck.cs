@@ -3,7 +3,7 @@ using GreenFieldCardGame.Core.Interfaces;
 
 namespace GreenFieldCardGame.Core.Entities
 {
-    public class Deck : IDeck // Implement the new interface
+    public class Deck : IDeck
     {
         private List<Card> _cards;
 
@@ -28,6 +28,12 @@ namespace GreenFieldCardGame.Core.Entities
         public bool RemoveCard(Card card)
         {
             return _cards.Remove(card);
+        }
+
+        public void SetCards(IEnumerable<Card> newCards)
+        {
+            // Create a new list to ensure internal consistency and prevent external modification
+            _cards = new List<Card>(newCards);
         }
 
     }

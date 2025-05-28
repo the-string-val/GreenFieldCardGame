@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GreenFieldCardGame.Core\GreenFieldCardGame.Core.csproj" />
+  </ItemGroup>
+
 </Project>
