@@ -5,6 +5,6 @@ namespace GreenFieldCardGame.Core.Interfaces
 {
     public interface IDeckCreationStrategy
     {
-        IEnumerable<Card> CreateDeckCards();
+        List<Card> CreateDeckCards();
     }
 }
